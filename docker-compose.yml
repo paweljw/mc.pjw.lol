@@ -14,7 +14,7 @@ services:
       EULA: "TRUE"
       TYPE: "NEOFORGE"
       VERSION: "1.21.1"
-      MEMORY: "6144M"
+      MEMORY: "10240M"
       MAX_PLAYERS: "10"
       MOTD: "poLANka v3.0"
       USE_MEOWICE_FLAGS: "true"
