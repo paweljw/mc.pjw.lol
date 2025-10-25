@@ -1,0 +1,6 @@
+["Right-click Fruit Tree Harvesting Settings"]
+	#Disable/enable right-click harvesting of tree fruits
+	"Enable right-click harvesting for tree fruits" = true
+
+["Enable/Disable Garden World Generation"]
+    "Generate avocado trees" = false
