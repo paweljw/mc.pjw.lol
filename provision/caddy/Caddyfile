@@ -1,0 +1,9 @@
+# Proxy to the BlueMap web interface
+mc.pjw.lol {
+	reverse_proxy mc:8100
+}
+
+# local testing only
+# http://localhost:8100 {
+#     reverse_proxy mc:8100
+# }

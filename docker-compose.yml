@@ -43,6 +43,8 @@ services:
         biomes-o-plenty
         terrablender
         jei
+        bluemap
+        create-bluemap
       MODRINTH_DOWNLOAD_DEPENDENCIES: "optional"
       MODRINTH_ALLOWED_VERSION_TYPE: "beta"
       PREVIEWS_CHAT: "true"
@@ -56,3 +58,22 @@ services:
     volumes:
       - "./data:/data"
       - "./provision/config:/config"
+
+  caddy:
+    image: caddy:2.10-alpine
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+      # - "8100:8100" # local testing only
+    volumes:
+      - ./provision/caddy:/etc/caddy
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:
